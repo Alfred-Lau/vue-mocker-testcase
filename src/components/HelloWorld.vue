@@ -10,9 +10,13 @@ export default {
   props: {
     msg: String,
   },
+  data() {
+    return {};
+  },
   mounted() {
-    const data = this.$mocker.get('/api/test', { project: 100 });
-    console.log(data);
+    this.$mocker.get('/api/test', { project: 100 }).then((data) => {
+      console.log(data.data);
+    });
   },
 };
 </script>

@@ -6,8 +6,10 @@ Vue.config.productionTip = false;
 
 Vue.use(VueMocker, {
   platform: 'yapi',
-  api:
-    'https://yapi.cai-inc.com/mock/733/bidding-open/result/financerEvaluateAgency',
+
+  api: {
+    '/api/test': 'https://yapi.cai-inc.com/mock/1816/api/blogs/list',
+  },
 });
 
 new Vue({

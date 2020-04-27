@@ -1,3 +1,5 @@
-// import axios from 'axios'
+import axios from 'axios';
 
-// const baseOptions = {}
+const request = axios.create({});
+
+export default request;
