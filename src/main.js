@@ -18,7 +18,7 @@ Vue.use(VueMocker, {
   platform: 'yapi',
 
   api: {
-    '/api/test': 'https://yapi.cai-inc.com/mock/1816/api/blogs/list',
+    '/api/test': 'https://yapi.XXXX.com/mock/1816/api/blogs/list',
   },
 });
 

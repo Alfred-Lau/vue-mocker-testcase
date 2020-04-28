@@ -36,12 +36,12 @@ export default class VueMocker {
         // console.log('第一步：我要开始拉取所有API结构到本地啦', options);
         // load mock data and cache them
         // VueMocker.request(
-        //   'https://yapi.cai-inc.com/mock/1816/api/blog/detail'
+        //   'https://yapi.XXXX.com/mock/1816/api/blog/detail'
         // ).then((res) => {
         //   console.log('evidence', res.data);
         // });
         // VueMocker.request(
-        //   'https://yapi.cai-inc.com/api/interface/list_menu?project_id=1816&token=fb549ebd09dac8b3c594b218f3944712597af9b2f1ef86939b931abe3a6dafb7'
+        //   'https://yapi.XXXX.com/api/interface/list_menu?project_id=1816&token=fb549ebd09dac8b3c594b218f3944712597af9b2f1ef86939b931abe3a6dafb7'
         // ).then((value) => {
         //   console.log('evidence', value);
         // });
@@ -58,7 +58,7 @@ export default class VueMocker {
           function(response) {
             // console.log('prod-server-data', response.data);
             VueMocker.request(
-              'https://yapi.cai-inc.com/mock/1816/api/blog/detail'
+              'https://yapi.XXXX.com/mock/1816/api/blog/detail'
             ).then((res) => {
               const compareResult = Strategies.compareCommon(
                 res.data,
