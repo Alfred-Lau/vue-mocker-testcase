@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p>{{ content }}</p>
   </div>
 </template>
 
@@ -11,12 +12,18 @@ export default {
     msg: String,
   },
   data() {
-    return {};
+    return {
+      content: 'default',
+    };
   },
   mounted() {
-    this.$mocker.get('/api/test', { project: 100 }).then((data) => {
-      console.log(data.data);
+    this.$http.get('/api/blog/detail', { project: 100 }).then((data) => {
+      /* f proxy */
+      this.content = data.data.data.content || 'changed';
     });
+    // this.$mocker.get('/api/test', { project: 100 }).then((data) => {
+    //   console.log(data.data);
+    // });
   },
 };
 </script>
