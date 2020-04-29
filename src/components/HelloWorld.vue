@@ -2,6 +2,20 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>{{ content }}</p>
+
+    <!-- 可写：注意下面两者的 区别 -->
+    <input type="text" name="" id="" v-model="msg" />
+    <input
+      type="text"
+      name=""
+      id=""
+      :value="msg"
+      @input="
+        (e) => {
+          this.msg = e.target.value;
+        }
+      "
+    />
   </div>
 </template>
 
